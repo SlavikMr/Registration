@@ -1,0 +1,22 @@
+body {
+  background: #bdc3c7 !important;
+}
+
+form {
+  border: 2px solid white;
+  width: 400px;
+  margin: 50px;
+  padding: 10px 50px;
+}
+
+.form-control {
+  margin-top: 5px;
+}
+
+label {
+  display: block !important;
+}
+
+small {
+  color: #e74c3c;
+}
