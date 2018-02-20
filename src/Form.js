@@ -12,7 +12,7 @@ import {
   passwordValidator,
 } from './validators';
 
-export default class Form extends React.Component {
+export default class Form extends React.PureComponent {
   constructor(props) {
     super(props);
     this.regExp = {
@@ -100,6 +100,7 @@ export default class Form extends React.Component {
           errorMessage={username.error}
           onFieldChange={this.handleChange}
           onBlurChange={this.handleBlur}
+          isLoading={isLoading}
         />
         <FormGroup
           labelValue='Password'
@@ -111,6 +112,7 @@ export default class Form extends React.Component {
           errorMessage={password1.error}
           onFieldChange={this.handleChange}
           onBlurChange={this.handleBlur}
+          isLoading={isLoading}
         />
         <FormGroup
           labelValue='Password again'
@@ -122,6 +124,7 @@ export default class Form extends React.Component {
           errorMessage={password2.error}
           onFieldChange={this.handleChange}
           onBlurChange={this.handleBlur}
+          isLoading={isLoading}
         />
         <button type="submit" className="btn btn-primary" disabled={isLoading || disabled}>Send</button>
         <div>{isLoading && message}</div>

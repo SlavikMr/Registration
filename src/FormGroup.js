@@ -12,7 +12,7 @@ export class FormGroup extends React.Component {
   }
 
   render() {
-    const { labelValue, name, type, value, placeholder, showError, errorMessage } = this.props;
+    const { labelValue, name, type, value, placeholder, showError, errorMessage, isLoading } = this.props;
 
     return (
       <div className="form-group">
@@ -26,6 +26,7 @@ export class FormGroup extends React.Component {
             className="form-control"
             placeholder={placeholder}
             autoComplete="off"
+            disabled={isLoading}
           />
         </label>
         <small className="form-text">{showError && errorMessage}</small>
